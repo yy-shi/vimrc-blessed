@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<ruleset name="WMI Magento PHPMD rule set" xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>Code Check Rules</description>
+    
+    <!--逻辑复杂度判断 if while for foreach switch-->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="65" />
+        </properties>
+    </rule>
+    <!-- 执行路径复杂度检查 自动组合逻辑可能性-->
+    <!--<rule ref="rulesets/codesize.xml/NPathComplexity">-->
+         <!--<properties>-->
+            <!--<property name="minimum" value="10000" />-->
+        <!--</properties>-->
+    <!--</rule>-->
+    <!-- 确保函数长度不会太长 -->
+    <!--<rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
+        <properties>
+            <property name="minimum" value="120" />
+            <property name="ignore-whitespace" value="true" />
+        </properties>
+    </rule>-->
+
+    <!-- 函数参数数量检查 -->
+    <rule ref="rulesets/codesize.xml/ExcessiveParameterList" >
+        <properties>
+            <property name="minimum" value="8" />
+        </properties>
+    </rule>
+
+    <!-- pulic的方法和属性数量监测 -->
+    <rule ref="rulesets/codesize.xml/ExcessivePublicCount" >
+        <properties>
+            <property name="minimum" value="40" />
+        </properties>
+    </rule>
+
+    <!-- 类的成员属性数量检查 -->
+    <rule ref="rulesets/codesize.xml/TooManyFields" >
+        <properties>
+            <property name="maxfields" value="40" />
+        </properties>
+    </rule>
+
+    <!-- 类的方法数量最大值 -->
+    <rule ref="rulesets/codesize.xml/TooManyMethods">
+        <properties>
+            <property name="maxmethods" value="50" />
+        </properties>
+    </rule>
+    <!-- 一个类的整体复杂度 -->
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+        <properties>
+            <property name="maximum" value="200" />
+        </properties>
+    </rule>
+
+    <!-- 检查没有用到的代码，声明没有使用的变量-->
+    <rule ref="rulesets/unusedcode.xml" />
+    <!-- Check for exit(), eval(), goto, excessive inheritance and dependance -->
+    <rule ref="rulesets/design.xml" />
+
+    <!-- 命名规则 -->
+    <!-- 变量名字不要太长 -->
+    <rule ref="rulesets/naming.xml/LongVariable">
+        <properties>
+            <property name="maximum" value="30" />
+        </properties>
+    </rule>
+    <!-- 不易理解的短命名方法 -->
+    <rule ref="rulesets/naming.xml/ShortMethodName" />
+    <!-- 确保构造函数使用 __construct -->
+    <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass" />
+    <!-- 常量命名 "XX_NAME" -->
+    <rule ref="rulesets/naming.xml/ConstantNamingConventions" />
+    <!-- 检查函数返回值为boolen的方法命名是否为 is__ -->
+    <rule ref="rulesets/naming.xml/BooleanGetMethodName" />
+</ruleset>
