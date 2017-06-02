@@ -72,30 +72,30 @@
 
 
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
-Plugin "https://github.com/scrooloose/nerdtree"
-Plugin "https://github.com/tomasr/molokai"
+Plugin 'https://github.com/scrooloose/nerdtree'
+Plugin 'https://github.com/tomasr/molokai'
 Plugin 'https://github.com/altercation/vim-colors-solarized'
-Plugin "https://github.com/majutsushi/tagbar"
-Plugin "https://github.com/scrooloose/nerdcommenter"
-Plugin "https://github.com/xolox/vim-misc"
-Plugin "https://github.com/xolox/vim-session"
-Plugin "https://github.com/Shougo/vimproc.vim"
-Plugin "https://github.com/ervandew/supertab"
-Plugin "https://github.com/Shougo/vimshell.vim"
-Plugin "https://github.com/mikehaertl/pdv-standalone"
-Plugin "https://github.com/vim-airline/vim-airline"
-Plugin "https://github.com/vim-scripts/xml.vim"
-Plugin "https://github.com/vim-scripts/phpfolding.vim"
-Plugin "https://github.com/jeetsukumaran/vim-buffergator"
-Plugin "https://github.com/tyok/nerdtree-ack"
-Plugin "https://github.com/tyok/ack.vim"
-Plugin "https://github.com/kien/ctrlp.vim"
+Plugin 'https://github.com/majutsushi/tagbar'
+Plugin 'https://github.com/scrooloose/nerdcommenter'
+Plugin 'https://github.com/xolox/vim-misc'
+Plugin 'https://github.com/xolox/vim-session'
+Plugin 'https://github.com/Shougo/vimproc.vim'
+Plugin 'https://github.com/ervandew/supertab'
+Plugin 'https://github.com/Shougo/vimshell.vim'
+Plugin 'https://github.com/mikehaertl/pdv-standalone'
+Plugin 'https://github.com/vim-airline/vim-airline'
+Plugin 'https://github.com/vim-scripts/xml.vim'
+Plugin 'https://github.com/vim-scripts/phpfolding.vim'
+Plugin 'https://github.com/jeetsukumaran/vim-buffergator'
+Plugin 'https://github.com/tyok/nerdtree-ack'
+Plugin 'https://github.com/tyok/ack.vim'
+Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'https://github.com/fisadev/vim-ctrlp-cmdpalette'
-Plugin "https://github.com/easymotion/vim-easymotion"
-Plugin "https://github.com/tpope/vim-fugitive"
-Plugin "https://github.com/Shougo/unite.vim"
+Plugin 'https://github.com/easymotion/vim-easymotion'
+Plugin 'https://github.com/tpope/vim-fugitive'
+Plugin 'https://github.com/Shougo/unite.vim'
 Plugin 'https://github.com/Shougo/neocomplete.vim'
 Plugin 'https://github.com/godlygeek/tabular'
 Plugin 'https://github.com/evanmiller/nginx-vim-syntax'
@@ -107,7 +107,7 @@ Plugin 'https://github.com/tacahiroy/ctrlp-funky'
 Plugin 'https://github.com/mattn/emmet-vim'
 Plugin 'https://github.com/samuelsimoes/vim-jsx-utils'
 Plugin 'https://github.com/bsdelf/bufferhint'
-Plugin 'https://github.com/mhinz/vim-startify'
+Plugin 'https://github.com/yy-shi/vim-startify'
 "Plugin 'https://github.com/mhinz/vim-signify'
 Plugin 'https://github.com/airblade/vim-gitgutter'
 Plugin 'https://github.com/evidens/vim-twig'
@@ -131,6 +131,7 @@ Plugin 'https://github.com/ekalinin/Dockerfile.vim.git'
 Plugin 'https://github.com/fatih/vim-go'
 "基本配置
 
+call vundle#end()
 syntax enable
 filetype plugin on
 syntax on  
