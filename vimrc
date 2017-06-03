@@ -129,6 +129,7 @@ Plugin 'https://github.com/jiangmiao/auto-pairs'
 Plugin 'https://github.com/gregsexton/MatchTag'
 Plugin 'https://github.com/ekalinin/Dockerfile.vim.git'
 Plugin 'https://github.com/fatih/vim-go'
+Plugin 'plasticboy/vim-markdown'
 "基本配置
 
 call vundle#end()
@@ -188,16 +189,7 @@ map <C-l> <C-W>l
 
 
 let mapleader=","
-let g:lexical#spell = 1
 
-augroup lexical
-  autocmd!
-  autocmd FileType markdown,mkd call lexical#init()
-  autocmd FileType textile call lexical#init()
-  autocmd FileType js call lexical#init()
-  "autocmd FileType php call lexical#init()
-  autocmd FileType text call lexical#init({ 'spell': 0 })
-augroup END
 "vim-easy-align
 vmap <Leader>a <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
@@ -217,7 +209,8 @@ set pastetoggle=<F2>
 set showmode
 set backspace=2
 set title
-
+"markdown
+let g:vim_markdown_autowrite = 1
 "vim-jsx 
 let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 1
