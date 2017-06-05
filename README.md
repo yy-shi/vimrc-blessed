@@ -7,8 +7,8 @@
 
 ```shell
 git clone  https://github.com/yy-shi/vim-bless ~/.vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
+ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+brew install vim --with-lua --with-override-system-vi
 vim  
 
 :PluginInstall
