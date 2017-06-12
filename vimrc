@@ -604,6 +604,12 @@ let PHP_vintage_case_default_indent=1
 
 function LoadCwdVimrc()
     let my_path = getcwd()
+    let filepath = $HOME . "/.vim/vimrc.my"
+    if filereadable(filepath)
+        if filepath != $MYVIMRC
+            execute "so ".filepath
+        endif
+    endif
     let filepath = my_path . "/.vimrc"
     if filereadable(filepath)
         if filepath != $MYVIMRC
