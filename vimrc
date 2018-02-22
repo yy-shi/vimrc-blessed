@@ -98,7 +98,6 @@ Plugin 'https://github.com/tpope/vim-fugitive'
 Plugin 'https://github.com/Shougo/unite.vim'
 Plugin 'https://github.com/Shougo/neocomplete.vim'
 Plugin 'https://github.com/godlygeek/tabular'
-Plugin 'https://github.com/evanmiller/nginx-vim-syntax'
 Plugin 'https://github.com/vim-scripts/ZoomWin'
 Plugin 'https://github.com/maksimr/vim-jsbeautify'
 Plugin 'https://github.com/millermedeiros/vim-esformatter'
@@ -122,7 +121,6 @@ Plugin 'https://github.com/yy-shi/vim-sqlformat'
 Plugin 'https://github.com/int3/vim-extradite'
 Plugin 'https://github.com/gcavallanti/vim-noscrollbar'
 Plugin 'https://github.com/ivalkeen/vim-ctrlp-tjump'
-Plugin 'https://github.com/ashisha/image.vim'
 Plugin 'https://github.com/adoy/vim-php-refactoring-toolbox'
 Plugin 'https://github.com/jwhitley/vim-matchit'
 Plugin 'https://github.com/jiangmiao/auto-pairs'
@@ -130,6 +128,7 @@ Plugin 'https://github.com/gregsexton/MatchTag'
 Plugin 'https://github.com/ekalinin/Dockerfile.vim.git'
 Plugin 'https://github.com/fatih/vim-go'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'https://github.com/skywind3000/asyncrun.vim'
 "基本配置
 
 call vundle#end()
@@ -205,6 +204,8 @@ let g:EasyMotion_smartcase = 1
 map f <Plug>(easymotion-prefix)
 map ff <Plug>(easymotion-s)
 nnoremap <F2> :set invpaste paste?<CR>
+
+autocmd FileType python nnoremap <F7> :AsyncRun -raw ipython %<cr>
 set pastetoggle=<F2>
 set showmode
 set backspace=2
