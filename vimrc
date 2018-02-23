@@ -101,7 +101,7 @@ Plugin 'https://github.com/godlygeek/tabular'
 Plugin 'https://github.com/vim-scripts/ZoomWin'
 Plugin 'https://github.com/maksimr/vim-jsbeautify'
 Plugin 'https://github.com/millermedeiros/vim-esformatter'
-Plugin 'https://github.com/scrooloose/syntastic'
+Plugin 'https://github.com/w0rp/ale'
 Plugin 'https://github.com/tacahiroy/ctrlp-funky'
 Plugin 'https://github.com/mattn/emmet-vim'
 Plugin 'https://github.com/samuelsimoes/vim-jsx-utils'
@@ -219,23 +219,36 @@ let g:jsx_ext_required = 0
 
 nnoremap ,, <ESC>:lnext <RETURN>
 
-"------------syntastic------------
-let g:syntastic_html_tidy_exec = 'tidy5'
-let g:syntastic_php_checkers = ['php',  'phpmd']
-
-let g:syntastic_php_phpmd_post_args=" ~/.vim/config/php-md/rules.xml"
-"set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%{noscrollbar#statusline()}
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_aggregate_errors = 1
 "shiftp
 let g:ctrlp_cmdpalette_execute = 1
 
+" ale
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'python': ['autopep8', 'yapf'],
+\}
+let g:ale_fix_on_save = 1
+
+
+let g:ale_completion_enabled = 1
+
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
+"在vim自带的状态栏中整合ale
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled = 1
+
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
+
+let g:ale_open_list = 1
 "phpfolding
 let g:DisableAutoPHPFolding =1
 autocmd  FileType  php EnableFastPHPFolds
