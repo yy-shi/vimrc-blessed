@@ -17,3 +17,4 @@ brew install the_silver_searcher
 cd ~/.vim/bundle/vimproc.vim && make
 ```
 ![screenshot](https://github.com/yy-shi/vimrc-blessed/blob/master/screenshot.png)
+1
