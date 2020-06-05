@@ -3,7 +3,7 @@
 
 * God bless you never get bugs
 
-## 使用方法
+## 使用方法 
 
 ```shell
 git clone  https://github.com/yy-shi/vim-bless ~/.vim
